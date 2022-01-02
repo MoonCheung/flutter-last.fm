@@ -5,12 +5,12 @@ import '../../artist.dart';
 
 typedef ArtistSearchResponse = Either<NetworkException<void>, Artists>;
 
-/// A repository responsible for storing and retrieving [Artist]/s data to/from
-/// different data sources.
+///负责存储和检索[Artister]/s数据的存储库
+///不同的数据源。
 ///
-/// The implementation depends on [ArtistRemoteSource] to send and fetch
-/// [Artist] related data from/to the API.
+///实现依赖于[ArtisterMoteSource]发送和获取
+///[艺术家]API的相关数据。
 abstract class ArtistRepository {
-  /// Returns [Artist]s matching with the given [name].
+  /// 返回与给定[名称]匹配的[艺术家]。
   Future<ArtistSearchResponse> findByName(String name);
 }

@@ -12,6 +12,7 @@ class AlbumDetailQueryDto extends Equatable {
 
   const AlbumDetailQueryDto({required this.album, required this.artist});
 
+  // 工厂构造函数，针对专辑信息数据来传递
   factory AlbumDetailQueryDto.fromAlbum(Album album) {
     return AlbumDetailQueryDto(
       artist: album.artist.name,

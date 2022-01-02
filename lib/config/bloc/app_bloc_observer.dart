@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 
-/// Sets a global bloc observer for logging bloc behaviour.
+// 为记录集团行为设置全局集团观察者。
 void setBlocObserver() => Bloc.observer = _AppBlocObserver();
 
 class _AppBlocObserver extends BlocObserver {

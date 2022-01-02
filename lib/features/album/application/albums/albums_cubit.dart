@@ -8,7 +8,7 @@ import '../../album.dart';
 
 part 'albums_state.dart';
 
-/// A cubit responsible for [Albums] related functionality.
+/// 负责[相册]相关功能的cubit
 @injectable
 class AlbumsCubit extends Cubit<AlbumsState> {
   final AlbumRepository _albumRepository;
@@ -22,40 +22,40 @@ class AlbumsCubit extends Cubit<AlbumsState> {
     await super.close();
   }
 
-  /// Removes all [Albums] from the [_albumRepository] and emits
-  /// [AllAlbumsLoaded] state with an empty albums list.
+  ///从[_albumRepository]中删除所有[Albums]并发出
+  ///[AllAlbumsLoaded]状态为空相册列表。
   Future<void> deleteAllAlbums() async {
     await _albumRepository.deleteAllAlbums();
     emit(const AllAlbumsLoaded([]));
   }
 
-  /// Gets all [Albums] from the [_albumRepository] and emits [AllAlbumsLoaded]
-  /// state with the albums list.
+  ///从[_albumRepository]获取所有[Albums]并发出[AllAlbumsLoaded]
+  ///用相册列表说明。
   ///
-  /// Also, [AlbumsLoading] state will be emitted while the albums are loaded.
+  ///此外，在加载相册时，还会发出[AlbumsLoading]状态。
   Future<void> loadAllAlbums() async {
     emit(const AlbumsLoading());
     final response = await _albumRepository.findAll();
     emit(AllAlbumsLoaded(response));
   }
 
-  /// Gets top [Albums] of an artist with the given [name] from the
-  /// [_albumRepository]. And once, the albums are found, it will emit
-  /// [TopAlbumsLoaded] state.
+  ///从中获取具有给定[name]的艺术家的顶级[Albums]
+  ///[[u]。一旦找到相册，它就会发出
+  ///[TopAlbumsLoaded]状态。
   ///
-  /// Also, [AlbumsLoading] state will be emitted while the top albums are
-  /// loaded.
+  ///此外，在播放顶级专辑时，还会发出[AlbumsLoading]状态
+  ///上膛了。
   Future<void> loadTopAlbumsByArtistName(String name) async {
     emit(const AlbumsLoading());
     final response = await _albumRepository.findTopAlbumsByArtistName(name);
     emit(TopAlbumsLoaded(response));
   }
 
-  /// Watches for any updated [AlbumDetails] from [_albumRepository] and
-  /// emits [AllAlbumsLoaded] state with all albums list.
+  ///监视[_albumRepository]中的任何更新的[AlbumDetails]，以及
+  ///与所有相册列表一起发出[AllAlbumsLoaded]状态。
   ///
-  /// Before watching for any update, it will load all albums by calling
-  /// [loadAllAlbums] method.
+  ///在观看任何更新之前，它将通过调用
+  ///[loadAllAlbums]方法。
   Future<void> watchAllAlbums() async {
     await loadAllAlbums();
     _streamSubscription ??= _albumRepository

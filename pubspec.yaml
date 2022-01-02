@@ -7,40 +7,65 @@ environment:
   sdk: ">=2.13.0 <3.0.0"
 
 dependencies:
+  # 一个可预测的状态管理库，有助于实现 BLoC 设计模式。
   bloc: ^7.2.1
+  # 一个颤振库，用于显示来自互联网的图像并将它们保存在缓存目录中
   cached_network_image: ^3.1.0+1
+  # 这是一个资产存储库，包含 Flutter 的 Cupertino 小部件使用的默认图标资产集
   cupertino_icons: ^1.0.4
+  # Dart 中的函数式编程库
   dartz: ^0.10.0
+  # Dart 的一个强大的 Http 客户端，支持拦截器、全局配置、FormData、请求取消、文件下载、超时等
   dio: ^4.0.3
+  # 简化相等比较的库
   equatable: ^2.0.3
   flutter:
     sdk: flutter
   flutter_bloc: ^7.3.3
   flutter_localizations:
     sdk: flutter
+  # Flutter 的 SVG 渲染和小部件库，允许绘制和显示可缩放矢量图形 1.1 文件
   flutter_svg: ^0.23.0+1
+  # 来自functional_enum的扩展
   functional_enum_annotation: ^1.2.2
+  # 这是一个用于 Dart 和 Flutter 项目的简单服务定位器，其中包含一些受到 Splat 启发的附加功能
   get_it: ^7.2.0
+  # 基于 Navigation 2 的 Flutter 声明式路由器，支持深度链接、数据驱动的路由等
   go_router: ^2.2.7
+  # Hive 是一个用纯 Dart 编写的轻量级且快速的键值数据库。受 Bitcask 的启发
   hive: ^2.0.4
   hive_flutter: ^1.1.0
+  # Injectable 是一个方便的 get_it 代码生成器。受 Angular DI、Guice DI 和 inject.dart 的启发
   injectable: ^1.5.0
+  # 提供国际化和本地化工具，包括消息翻译、复数和性别、日期/数字格式和解析以及双向文本
   intl: ^0.17.0
+  # 通过 `json_serializable` 包支持 JSON 代码生成的类和辅助函数
   json_annotation: ^4.3.0
+  # Pretty Dio logger 是一个 Dio 拦截器，它以漂亮、易于阅读的格式记录网络调用
   pretty_dio_logger: ^1.1.1
+  # 一组用于转换和操作流的实用程序
   stream_transform: ^2.0.0
+  # 用于启动 URL 的 Flutter 插件。支持网络、电话、短信和电子邮件方案
   url_launcher: ^6.0.12
 
 dev_dependencies:
+  # bloc 测试
   bloc_test: ^8.5.0
+  # build_runner 包提供了一种在 pub 等工具之外使用 Dart 代码生成文件的具体方法
   build_runner: ^2.1.5
+  # 一种命令行工具，可简化更新 Flutter 应用程序启动器图标的任务
   flutter_launcher_icons: ^0.9.2
   flutter_test:
     sdk: flutter
+  # 冻结，但用于枚举。 函数式枚举的代码生成器，可以更好地使用枚举
   functional_enum: ^1.1.4
+  # hive 库的生成器
   hive_generator: ^1.1.1
+  # injectable 库的生成器
   injectable_generator: ^1.5.2
+  # 为动作 JSON 提供 Dart 构建系统构建器
   json_serializable: ^6.0.1
+  # 受 mockito 启发的 Dart 模拟库。
   mocktail: ^0.2.0
 
 flutter:

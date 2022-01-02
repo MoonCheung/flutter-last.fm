@@ -3,29 +3,29 @@ import 'package:injectable/injectable.dart';
 
 import '../../album.dart';
 
-/// Stores and retrieves [AlbumDto] in/from local storage.
+///在本地存储器中存储和检索[AlbumDto]。
 ///
-/// The implementation uses [Hive] database.
+///该实现使用[Hive]数据库。
 abstract class AlbumLocalSource {
-  /// Deletes an album from the local storage matching the given [query].
+  ///从与给定[query]匹配的本地存储中删除相册。
   Future<void> deleteAlbum(AlbumDetailQueryDto query);
 
-  /// Deletes all albums from the local storage.
+  ///从本地存储中删除所有相册。
   Future<void> deleteAllAlbums();
 
-  /// Returns an album detail matching the given [query].
+  ///返回与给定[query]匹配的唱片集详细信息。
   Future<AlbumDetailDto?> findAlbumDetail(AlbumDetailQueryDto query);
 
-  /// Returns all albums stored in the local storage.
+  ///返回存储在本地存储器中的所有相册。
   Future<List<AlbumDetailDto>> findAllAlbums();
 
-  /// Stores an [album] to the local storage and returns the same [album].
+  ///将[album]存储到本地存储器并返回相同的[album]
   Future<AlbumDetailDto> saveAlbum(AlbumDetailDto album);
 
-  /// Returns a stream of list of [AlbumDto] stored in local storage.
+  ///返回存储在本地存储器中的[AlbumDto]列表流。
   ///
-  /// A new event will be emitted whenever an [AlbumDto] is updated, removed,
-  /// or a new [AlbumDto] is stored.
+  ///每当[AlbumDto]被更新、删除时，就会发出一个新事件，
+  ///或者存储新的[AlbumDto]。
   Stream<List<AlbumDetailDto>> watchAllAlbums();
 }
 

@@ -9,8 +9,10 @@ class AppRouter {
   static const albumDetail = 'albumetail';
 
   static final GoRouter router = GoRouter(
+    // 使用路由构建器和错误页面构建器配置GoRouter的默认构造函数。
     debugLogDiagnostics: kDebugMode,
     routes: [
+      // 首页
       GoRoute(
         path: '/',
         pageBuilder: (context, state) => MaterialPage(
@@ -18,6 +20,7 @@ class AppRouter {
           child: const MainScreen(),
         ),
       ),
+      // 专辑
       GoRoute(
         name: albums,
         path: '/albums',
@@ -29,6 +32,7 @@ class AppRouter {
           );
         },
         routes: [
+          // 专辑详情
           GoRoute(
             path: 'detail',
             name: albumDetail,
@@ -47,6 +51,7 @@ class AppRouter {
       key: state.pageKey,
       child: ErrorScreen(error: state.error),
     ),
+    // 使用路由构建器和错误页面构建器配置GoRouter的默认构造函数。
     redirect: (state) {
       if (state.location == '/albums') {
         final artist = state.queryParams['artist'];

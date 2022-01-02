@@ -1,17 +1,17 @@
-/// A marker interface implemented by all app exceptions.
+/// 由所有应用例外实现的标记接口。
 abstract class AppException implements Exception {}
 
-/// An exception should never happen but happened anyway because of wrong
-/// assumptions/usage.
-///
-/// We should report this exception using a crash reporting tool if it occurs
-/// in production to fix it ASAP as it is intentionally unhandled
-/// programmatically, and we don't expect it to happen.
-///
-/// Extending [Error] class will let us automatically have a stack trace in the
-/// first time the error is thrown by a `throw` expression.
+// 异常不应该发生，但由于错误而无论如何都会发生
+// 假设/用法。
+// ///
+// 如果发生崩溃报告，我们应该使用崩溃报告工具报告此异常
+// 在生产中尽快修复它，因为它是故意未处理的
+// 以编程方式，我们不希望它发生。
+// ///
+// 扩展 [Error] 类将允许我们在
+// 第一次错误是由"throw"表达式引发的。
 class UnexpectedError extends Error implements AppException {
-  /// Message describing the error.
+  /// 描述错误的消息
   final Object? message;
 
   UnexpectedError([this.message]);

@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 
 import '../../../shared/models/image.dart';
 
-/// A list of artists.
+/// 艺术家名单。
 typedef Artists = List<Artist>;
 
 class Artist extends Equatable {

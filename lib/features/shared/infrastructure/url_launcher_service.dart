@@ -2,9 +2,9 @@
 import 'package:injectable/injectable.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-/// A class responsible for opening web urls.
+///负责打开web URL的类。
 ///
-/// The implementation is based on the `url_launcher` package.
+///该实现基于“url_launcher”包
 abstract class UrlLauncherService {
   Future<void> openUrl(String url);
 }

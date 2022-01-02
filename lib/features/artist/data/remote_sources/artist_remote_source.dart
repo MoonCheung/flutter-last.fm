@@ -8,10 +8,9 @@ import '../data.dart';
 typedef ArtistSearchRemoteResponse
     = Either<NetworkException<void>, ArtistDtoList>;
 
-/// A class responsible for fetching artist data from the backend API using an
-/// Http call.
+/// 一个类负责使用Http调用从后台API获取艺术家数据。
 abstract class ArtistRemoteSource {
-  /// Returns artists matching with the given [name].
+  /// 返回与给定[名称]匹配的艺术家
   Future<ArtistSearchRemoteResponse> findByName(String name);
 }
 

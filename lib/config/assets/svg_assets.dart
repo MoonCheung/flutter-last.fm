@@ -10,6 +10,8 @@ class SvgAssets {
   const SvgAssets._();
 }
 
+// 默认扩展名
+// 可以通过扩展名来指定图片的类型
 extension on String {
   String get svg => 'assets/svgs/$this.svg';
 }

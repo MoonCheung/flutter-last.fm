@@ -6,20 +6,20 @@ import '../core.dart';
 
 /// Helper methods for [DioError] error.
 extension DioErrorExtension on DioError {
-  /// Will return true when a request is cancelled.
+  /// 当请求被取消时，将返回true。
   bool get isCancelledError => type == DioErrorType.cancel;
 
-  /// Will return true when there is no internet connection.
+  /// 当没有internet连接时，将返回true
   bool get isConnectionError {
     return type == DioErrorType.other && error is SocketException;
   }
 
-  /// Will return true when [FormatException] is thrown when parsing a response.
+  /// 如果在解析响应时抛出 [FormatException] 时将返回 true。
   bool get isFormatError {
     return type == DioErrorType.other && error is FormatException;
   }
 
-  /// Will return true when response is returned with status code between
+  /// 当返回状态代码介于之间的响应时，将返回true
   /// >= 400 and < 500.
   bool get isResponseError => type == DioErrorType.response;
 

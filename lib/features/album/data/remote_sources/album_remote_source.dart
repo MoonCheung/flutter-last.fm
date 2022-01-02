@@ -9,14 +9,14 @@ typedef AlbumDetailRemoteResponse
     = Either<AlbumDetailNetworkError, AlbumDetailDto>;
 typedef TopAlbumsRemoteResponse = Either<TopAlbumsNetworkError, List<AlbumDto>>;
 
-/// A class responsible for fetching album data from the backend API using an
-/// Http call.
+///一个类，负责使用
+///Http呼叫。
 abstract class AlbumRemoteSource {
-  /// Returns an [AlbumDetailDto] by fetching it from the API with the [query].
+  ///通过使用[query]从API获取[AlbumDetailDto]，返回[AlbumDetailDto]
   Future<AlbumDetailRemoteResponse> findAlbumDetail(AlbumDetailQueryDto query);
 
-  /// Returns a list of [AlbumDto] by fetching it from the backend API using
-  /// the [artistName] as a query.
+  ///通过使用从后端API获取[AlbumDto]的列表，返回该列表
+  ///将[artistName]作为查询。
   Future<TopAlbumsRemoteResponse> findTopAlbumsByArtistName(String artistName);
 }
 

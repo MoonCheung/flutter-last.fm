@@ -1,0 +1,116 @@
+{
+  "@@locale": "zh",
+  "appName": "LastFM",
+  "@appName": {
+    "description": "应用程序名称"
+  },
+  "albums": "专辑",
+  "@albums": {
+    "description": "在AlbumsScreen的AppBar中显示的文本"
+  },
+  "albumDetail": "专辑详情",
+  "@albumDetail": {
+    "description": "在AlbumDetailScreen的AppBar中显示的文本"
+  },
+  "topAlbumsNotFound": "未找到最佳专辑。",
+  "@topAlbumsNotFound": {
+    "description": "当没有找到顶级专辑时，显示在顶级专辑屏幕上的文本。"
+  },
+  "formattedPlayCount": "{count,plural, =0{no plays} =1{{count} play} other{{count} plays}}",
+  "@formattedPlayCount": {
+    "description": "显示在顶级专辑列表中的文本",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "formattedListenerCount": "{count,plural, =0{No listeners} =1{{count} listener} other{{count} listeners}}",
+  "@formattedListenerCount": {
+    "description": "文本显示在艺术家搜索结果",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "format": "decimalPattern"
+      }
+    }
+  },
+  "artistNotFound": "Artist not found.",
+  "@artistNotFound": {
+    "description": "Text shown on artist search screen when search result is empty"
+  },
+  "somethingWenWrong": "Something went wrong.",
+  "@somethingWenWrong": {
+    "description": "Text show on artist search screen when error is occurred."
+  },
+  "search": "搜索",
+  "@search": {
+    "description": "艺术家搜索按钮上显示的文本"
+  },
+  "searchArtist": "搜索艺术家",
+  "@searchArtist": {
+    "description": "艺术家搜索输入字段上显示的文本作为提示"
+  },
+  "home": "家",
+  "@home": {
+    "description": "正文显示在主屏幕底部导航栏菜单上"
+  },
+  "artist": "艺术家",
+  "@artist": {
+    "description": "正文显示在主屏幕底部导航栏菜单上"
+  },
+  "more": "更多...",
+  "@more": {
+    "description": "文本显示在专辑详细信息屏幕上的更多按钮上"
+  },
+  "albumPublishDate": "专辑 . {publishedAt}",
+  "@albumPublishDate": {
+    "description": "在专辑屏幕上显示的文本，以显示专辑的发布日期.",
+    "placeholders": {
+      "publishedAt": {
+        "type": "String"
+      }
+    }
+  },
+  "removeAlbum": "移除专辑",
+  "@removeAlbum": {
+    "description": "专辑详细信息屏幕菜单按钮上显示的文本."
+  },
+  "removeAllAlbums": "移除全部专辑",
+  "@removeAllAlbums": {
+    "description": "文本显示在专辑列表屏幕菜单按钮."
+  },
+  "albumDeleteSuccessful": "专辑删除成功.",
+  "@albumDeleteSuccessful": {
+    "description": "删除相册时显示为通知栏消息的文本."
+  },
+  "albumNotFound": "专辑未发现.",
+  "@albumNotFound": {
+    "description": "未找到专辑时专辑详细信息屏幕上显示的文本."
+  },
+  "networkErrorMessage": "{ error, select, cancelled {Request cancelled.} connection {Please check your internet connection and try again.} custom {Something went wrong. Try again.} format {Something went wrong. Try again.} server {Server error. Try again later.} timeout {Connection timeout. Please check your internet connection.}}",
+  "@networkErrorMessage": {
+    "description": "不同屏幕上显示的网络错误文本.",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "retry": "重试",
+  "@retry": {
+    "description": "专辑详细信息重试按钮上显示的文本."
+  },
+  "error": "Error",
+  "@error": {
+    "description": "专辑详情画面 AppBar 标题上显示的文字."
+  },
+  "noAlbumsAddedYet": "还没有添加专辑!",
+  "@noAlbumsAddedYet": {
+    "description": "当没有存储的专辑时，专辑屏幕上显示文本."
+  },
+  "startSearchingArtist": "输入艺人姓名搜索艺人.",
+  "@startSearchingArtist": {
+    "description": "首次打开时艺术家搜索屏幕上显示的文本."
+  }
+}
